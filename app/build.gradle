@@ -1,0 +1,23 @@
+apply plugin: 'org.springframework.boot'
+apply plugin: 'kotlin'
+
+dependencies {
+
+	compile project(":commons")
+	
+	testCompile lib.spring_boot_test
+	compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
+}
+buildscript {
+	ext.kotlin_version = '1.1.2-4'
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+	}
+}
+repositories {
+	mavenCentral()
+}
+

@@ -1,0 +1,23 @@
+dependencies {
+
+	compile lib.kotlin_jdk8
+	compile lib.guava
+	compile lib.commons_lang
+	compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
+
+}
+buildscript {
+	ext.kotlin_version = '1.1.2-4'
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+	}
+}
+apply plugin: 'kotlin'
+repositories {
+	mavenCentral()
+}
+
+

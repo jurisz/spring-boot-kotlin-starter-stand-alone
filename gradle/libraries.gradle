@@ -1,0 +1,36 @@
+ext {
+
+	spring_platform_version = 'Brussels-SR2'
+	kotlinVersion = '1.1.2-2'
+
+	ext.lib = [
+
+			kotlin_jdk8             : "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlinVersion",
+			guava                   : "com.google.guava:guava",
+			commons_lang            : "org.apache.commons:commons-lang3",
+
+			spring_boot_web         : "org.springframework.boot:spring-boot-starter-web",
+			spring_boot_web_actuator: "org.springframework.boot:spring-boot-starter-actuator",
+			spring_boot_data_jpa    : "org.springframework.boot:spring-boot-starter-data-jpa",
+			spring_boot_test        : "org.springframework.boot:spring-boot-starter-test",
+			spring_context_support  : "org.springframework:spring-context-support",
+			spring_security_core    : "org.springframework.security:spring-security-core",
+
+			hibernate_ehcache       : "org.hibernate:hibernate-ehcache",
+			hibernate_envers        : "org.hibernate:hibernate-envers",
+			hibernate_java8         : "org.hibernate:hibernate-java8",
+			ehcache                 : "net.sf.ehcache:ehcache",
+
+			quartz                  : "org.quartz-scheduler:quartz",
+			gson                    : "com.google.code.gson:gson",
+
+			postgresql              : "org.postgresql:postgresql:9.4-1205-jdbc42",
+			hikaricp                : "com.zaxxer:HikariCP",
+
+			gson                    : "com.google.code.gson:gson",
+
+			spock_core              : "org.spockframework:spock-core",
+			groovy                  : "org.codehaus.groovy:groovy-all",
+	]
+}
+

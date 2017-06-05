@@ -1,0 +1,12 @@
+import org.apache.tools.ant.taskdefs.condition.Os
+
+createNpmExeTask('npm_install', 'npm', ['install'])
+createNpmExeTask('npm_and_bower_cache_install', 'npm-cache', ['install'])
+createNpmExeTask('npm_prod_build', 'npm', ['run-script', 'build:prod'])
+
+def createNpmExeTask(String taskName, String command, List params) {
+	return tasks.create(taskName, Exec) {
+		executable = Os.isFamily(Os.FAMILY_WINDOWS) ? command + '.cmd' : command
+		args = params
+	}
+}

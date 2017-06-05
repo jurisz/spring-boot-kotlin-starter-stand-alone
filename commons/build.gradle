@@ -1,0 +1,31 @@
+dependencies {
+
+	compile project(":api")
+
+	compile lib.kotlin_jdk8
+	compile lib.hikaricp
+	compile lib.postgresql
+
+	compile lib.spring_boot_web
+	compile lib.spring_boot_web_actuator
+	compile lib.spring_boot_data_jpa
+	compile lib.spring_context_support
+	compile lib.spring_security_core
+
+	compile lib.hibernate_envers
+	compile lib.hibernate_java8
+	compile lib.ehcache
+	compile(lib.hibernate_ehcache) {
+		exclude group: 'net.sf.ehcache', module: '*'
+	}
+
+	compile lib.quartz
+	
+	testCompile lib.groovy
+	testCompile(lib.spock_core) {
+		exclude group: 'junit'
+	}
+	
+	testCompile lib.spring_boot_test
+}
+

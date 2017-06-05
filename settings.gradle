@@ -1,0 +1,4 @@
+rootProject.name = 'kotlin-test-2'
+
+include 'api', 'commons', 'app'
+
